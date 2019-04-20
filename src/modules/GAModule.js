@@ -141,7 +141,7 @@ export default class GAModule extends BasicModule {
    * @param {number} timingValue - The number of milliseconds in elapsed time to report to Google Analytics (e.g. 20).
    * @param {string|null} timingLabel -  A string that can be used to add flexibility in visualizing user timings in the reports (e.g. 'Google CDN').
    */
-  trackTiming (timingCategory, timingVar, timingValue, timingLabel = null) {
+  trackTiming ({timingCategory, timingVar, timingValue, timingLabel}) {
     if (this.config.debug) {
       logDebug({timingCategory, timingVar, timingValue, timingLabel})
     }
